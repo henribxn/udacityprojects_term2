@@ -4,11 +4,11 @@ Author: Henri Bouxin
 Start Date: 2020 April 30th
 
 ## Project description
-When natural disasters happen, people use social media (like twitter) or else to try and get help. However, not all communications are natural disaster tweets and **there isn't a simple way to use key words in order to identify these kinds of texts**.
+When natural disasters happen, people use social medias (like twitter) to try and get help. However, not all communications are natural disaster related and **there isn't a simple way to use key words in order to identify these kinds of texts**.
 
-That is why, the objective is to **deploy a machine learning application in order to be able to classify a communication between many categories** so that to be able to react more quickly.
+That is why, the objective is to **deploy a machine learning application in order to be able to classify a communication between many categories**, hence enabling to react more quickly.
 
-Such a pipeline works can work with any kind of data as long as there are labelled data concerning your classification needs.
+Such a pipeline  can be reused (after some reprocessing work) with any kind of data as long as there are enough labelled data concerning your classification needs.
 
 There are three steps:
 1. Create an ETL which cleans the Data
@@ -27,6 +27,11 @@ There are three steps:
     `python run.py`
 
 3. Go to http://0.0.0.0:3001/
+
+## Example
+- Type in:   `We have lots of problems near Toulon, we are lacking water and food`
+
+![Screenshot](app/image_application.png)
 
 
 ## Repo Structure
@@ -59,7 +64,7 @@ There are three steps:
 - flask
 
 ## To go further -- Potential improvements
-- The **classification task being imbalanced**, it could be important to train to fit a classification less prone to class imbalanced like a GBMClassifier, or try to implement StratifiedKfold for multiple Outputs, or re-weight the classes (class_weight="balanced" for a Random Forest Classification)
+- The **classification task being imbalanced**, it could be important to train to fit a classification less sensitive to class imbalances like a GBMClassifier, or try to implement StratifiedKfold for multiple Outputs and re-weight the classes (for example by using `class_weight="balanced"` for a Random Forest Classification)
 - In order to improve the performance of our model (i.e. recall and precision metrics), we could try other techniques such as :
-  - **deep learning model relying on a pre-trained embeddings** (`https://www.tensorflow.org/tutorials/keras/text_classification_with_hub`)
-  - **RNN model** in order to take into account the context of the sentences (you could try to adapt the LSTM model implemented in the Deep Learning Specialization: `https://github.com/Kulbear/deep-learning-coursera/blob/master/Sequence%20Models/Emojify%20-%20v2.ipynb`)
+  - **deep learning models relying on a pre-trained embedding** (`https://www.tensorflow.org/tutorials/keras/text_classification_with_hub`)
+  - **RNN models** in order to take into account the context of the sentences (you could try to adapt the LSTM model implemented in the Deep Learning Specialization: `https://github.com/Kulbear/deep-learning-coursera/blob/master/Sequence%20Models/Emojify%20-%20v2.ipynb`)

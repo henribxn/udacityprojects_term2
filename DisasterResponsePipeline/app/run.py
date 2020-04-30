@@ -2,6 +2,7 @@ import json
 import plotly
 import pandas as pd
 import re
+import numpy as np
 
 from nltk.stem import WordNetLemmatizer
 from nltk.tokenize import word_tokenize
@@ -51,6 +52,17 @@ def index():
     genre_counts = df.groupby('genre').count()['message']
     genre_names = list(genre_counts.index)
     
+    # Show distribution of different category
+    category = list(df.columns[4:])
+    category_counts = []
+    for column_name in category:
+        category_counts.append(np.sum(df[column_name]))
+        
+    # Show to 10 percentage categories
+    sorted_queries = df[df.columns[4:]].sum(axis=0).sort_values(ascending=False)
+    sorted_queries_pct = round(sorted_queries/sorted_queries.sum()*100,1)
+    top_10_classes = sorted_queries_pct[0:10]
+    
     # create visuals
     # TODO: Below is an example - modify to create your own visuals
     graphs = [
@@ -71,7 +83,46 @@ def index():
                     'title': "Genre"
                 }
             }
+        },
+        
+        {
+            'data': [
+                Bar(
+                    x=category,
+                    y=category_counts
+                )
+            ],
+
+            'layout': {
+                'title': 'Distribution of Message Categories',
+                'yaxis': {
+                    'title': "Count"
+                },
+                'xaxis': {
+                    'title': "Category"
+                }
+            }
+        },
+        
+         {
+            'data': [
+                Bar(
+                    x=top_10_classes.index.values.tolist(),
+                    y=top_10_classes.values.tolist()
+                )
+            ],
+
+            'layout': {
+                'title': 'Top 10 distribution of Message Categories in percentage',
+                'yaxis': {
+                    'title': "Percentage"
+                },
+                'xaxis': {
+                    'title': "Category"
+                }
+            }
         }
+        
     ]
     
     # encode plotly graphs in JSON
