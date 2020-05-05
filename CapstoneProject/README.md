@@ -3,14 +3,13 @@ Author: Henri Bouxin
 Published Date: 2020 May 5th
 
 ## Project description and motivation
-The goal of the project is to analyse Startbucks that contain simulated data mimicking customer behavior on the Starbucks rewards mobile app. Indeed, once every few days, Starbucks sends out an offer to users of the mobile app.
+The goal of the project is to analyse Startbucks data that contain simulated data mimicking customer behavior on the Starbucks rewards mobile app. Indeed, once every few days, Starbucks sends out an offer to users of the mobile app.
 
 I focused my work on trying to answer the following question:
 
 1. What is the impact of such offers in the company cash inflows ?
 2. Can demographic features help us understand the interactions between users and offers ?
 3. How to improve customer experience in terms of promotional offers by personalizing the distribution process using a recommendation engine ?
-4. Can we predict whether or not someone will respond to an offer ?
 
 For example, many other questions could also have been answered using such a data set such as:
 - Can we predict how much someone will spend based on demographics and offer type ?
@@ -22,7 +21,6 @@ For example, many other questions could also have been answered using such a dat
 - **data** :
   - Three starbucks json files (detailed in the data description section below)
   - Intermediate pickle file created during the heavy feature engineering part
-
 
 - **Starbucks_Capstone_notebook.ipynb**: jupyter notebook with all the differents steps of the project with the following table of contents:
   - `I. Data Exploration and cleaning`
@@ -75,10 +73,12 @@ You will also need to have software installed to run and execute an iPython Note
 ## Conclusion and further improvements
 - `Key takeaways`: end-to-end implementation of a recommendation engine combining both user based `Collaborative filtering with a FunkSVD` implementation and a content based approach to deal with the Cold Start Problem
 - `Further Improvements`:
-
+  - Compare the performance of the FunkSVD algorithm vs. a classification supervised learning approach that tries to predict if someone will respond to an offer
+  - Compare the results between option 1 and option 2 when filling in the user-item matrix values. Besides, it could be interesting to try to fine-tune the cost function of the Funk SVD optimization procedure in order to better take into account the amount spent
+  - Instead of the offline testing procedure, implement an online A/B testing approach
 
 ## Blog Post
-You can also find more details on the project by following the link to my blogpost: `XX`
+You can also find more details on the project by following the link to my blogpost: `https://medium.com/@henri.bouxin/personalize-you-promotion-campaigns-with-a-collaborative-filtering-approach-based-on-funksvd-71c33ec85f7a`
 
 ## Licensing, Acknowledgements
 - This project was completed as part of the `Udacity Data Scientist Nanodegree`. Data were provided by Udacity. The data was originally sourced by Udacity from Starbucks.
