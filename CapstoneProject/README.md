@@ -1,7 +1,6 @@
 # Starbuck's Capstone Challenge
 Author: Henri Bouxin
-
-Start Date: 2020 May 5th
+Published Date: 2020 May 5th
 
 ## Project description and motivation
 The goal of the project is to analyse Startbucks that contain simulated data mimicking customer behavior on the Starbucks rewards mobile app. Indeed, once every few days, Starbucks sends out an offer to users of the mobile app.
@@ -81,5 +80,6 @@ You will also need to have software installed to run and execute an iPython Note
 ## Blog Post
 You can also find more details on the project by following the link to my blogpost: `XX`
 
-## License
-This project was completed as part of the `Udacity Data Scientist Nanodegree`. Data were provided by Udacity. The data was originally sourced by Udacity from Starbucks.
+## Licensing, Acknowledgements
+- This project was completed as part of the `Udacity Data Scientist Nanodegree`. Data were provided by Udacity. The data was originally sourced by Udacity from Starbucks.
+- The Funk SVD implementation was inspired by the Udacity Data Scientists lessons on recommendation engines
