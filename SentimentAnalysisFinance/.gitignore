@@ -4,6 +4,9 @@
 # data
 Data
 
+# Pretrained model
+glove.6B
+
 # Jupyter Notebook
 .ipynb_checkpoints
 .DS_Store
