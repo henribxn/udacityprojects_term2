@@ -23,7 +23,7 @@ I decided to follow the `Udacity Data Scientist Nanodegree program` because I wa
 - Technological stacks: python, scikit-learn, statsmodels
 
 `SentimentAnalysisFinance`: Implementation of a sentiment classifier for financial news
-- Details: Showing how to power NLP classification task thanks to embeddings and recurrent neural networks, and writing of a medium post to share my understanding
+- Details: Showing how to power NLP classification task thanks to embeddings and recurrent neural networks, and writing of a medium post to share my understanding `https://medium.com/@henri.bouxin/boost-your-nlp-classification-tasks-with-pre-trained-embedding-and-deeplearning-72982c52792d`
 - Technological stacks: python, scikit-learn, keras, tensorflow
 
 `RecommendationEngineLessons` : Implementation of key takeaways functions and classes for an end-to-end recommendation engine

@@ -39,7 +39,7 @@ This project requires Python 3.x and the following Python libraries installed:
   - Implement another kind of best-in-class NLP models like BERT
 
 ## Blog Post
-You can also find more details on the project by following the link to my blogpost: `XX`
+You can also find more details on the project by following the link to my blogpost: `https://medium.com/@henri.bouxin/boost-your-nlp-classification-tasks-with-pre-trained-embedding-and-deeplearning-72982c52792d`
 
 ## Licensing, Acknowledgements
 - This project was completed as part of the `Udacity Data Scientist Nanodegree`. Data were provided by Udacity. The data was originally sourced by Udacity from Starbucks.
