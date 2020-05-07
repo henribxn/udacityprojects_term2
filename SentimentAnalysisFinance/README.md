@@ -47,3 +47,4 @@ You can also find more details on the project by following the link to my blogpo
 
 ## Licensing, Acknowledgements
 - This project was completed as part of the `Udacity Data Scientist Nanodegree`. Data were provided by Udacity. The data was originally sourced by Udacity from Starbucks.
+- The Kaggle data set on Sentiment Analysis for Financial News, and therefore I do not share this data set but you can find it here: https://www.kaggle.com/ankurzing/sentiment-analysis-for-financial-news/kernels
