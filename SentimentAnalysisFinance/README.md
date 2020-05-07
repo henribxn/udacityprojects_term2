@@ -11,12 +11,16 @@ Publication date: 6th may 2020
 
 The goal was therefore to acquire hands-on experience in implementing an NLP classification task on financial news headlines using sklearn, Keras and Tensorflow-Hub
 
+## Project description
+The goal of the project is to classify financial news headlines according to three sentiment levels: negative, neutral, positive. Such a classifier could be very helpful if you want to build a sentiment index based on news for a given sector for example. I focused my work on trying to answer the following questions:
+- What are the financial headlines I should pay attention to in terms of their very positive or negative tone?
+- To what extent can I trust such a classifier?
+
 ## Repo structure
 - **Text_classification.ipynb** : jupyter notebook with all the differents steps of the project with the following table of contents:
   - `I. Data Exploration of the financial news headlines, and first feature engineering`
   - `II. Machine learning standard approach for sentiment classification`
   - `III. More advanced approach leveraging on Deep Learning, Embeddings and RNN`
-
 
 ## Package Used
 This project requires Python 3.x and the following Python libraries installed:
